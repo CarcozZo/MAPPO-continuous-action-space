@@ -9,7 +9,7 @@ MAPPO连续动作版本（Tanh压缩）
 
 ---
 
-## ✅ Features / 主要特性
+## Features / 主要特性
 
 - Continuous actions: Actor outputs mean and log_std  
   连续动作：Actor输出均值mean和对数标准差log_std  
@@ -22,7 +22,7 @@ MAPPO连续动作版本（Tanh压缩）
 
 ---
 
-## 🧠 Core Idea / 核心原理
+## Core Idea / 核心原理
 
 - Actor outputs mean and log_std  
   Actor输出均值和对数标准差  
