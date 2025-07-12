@@ -19,19 +19,12 @@ MAPPO连续动作版本（Tanh压缩）
   正确修正log_prob，适用于PPO损失计算  
 - Uses a custom environment built on OpenAI Gym  
   基于 OpenAI Gym 框架自定义环境
+- Added act_dim in the constructor to represent the dimensionality of continuous actions (i.e., action vectors instead of discrete indices).
+  在构造函数中新增 act_dim，用于指定每个动作向量的维度。连续动作通常是一个向量，而非单一离散动作编号。
+- Changed the shape of a_n from (batch_size, episode_len, num_agents) to (batch_size, episode_len, num_agents, act_dim) to support continuous action vectors.
+  将原来 a_n 的形状从 (B, T, N) 改为 (B, T, N, act_dim)，以适配每个 agent 的连续动作向量。
 
 ---
-
-## Core Idea / 核心原理
-
-- Actor outputs mean and log_std  
-  Actor输出均值和对数标准差  
-- Constructs Normal(mean, std) distribution  
-  构建Normal(mean, std)正态分布  
-- Sample raw_action with rsample(), then squash with tanh to [-1,1]  
-  使用rsample()采样原始动作，再用tanh压缩到[-1,1]  
-- Correct log_prob to account for tanh transformation:  
-  修正log_prob以考虑tanh变换：  
 
 ## reward
 <img width="518" height="351" alt="image" src="https://github.com/user-attachments/assets/70852486-f402-4259-bf1d-125024263726" />
