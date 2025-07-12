@@ -1,4 +1,4 @@
-# MAPPO with Continuous Actions (Tanh Squash)  
+# MAPPO with Continuous Actions (Tanh Squash) (MLP Only)
 MAPPO连续动作版本（Tanh压缩）
 
 > ⭐ PyTorch implementation of Multi-Agent Proximal Policy Optimization (MAPPO)  
