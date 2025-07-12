@@ -32,3 +32,6 @@ MAPPO连续动作版本（Tanh压缩）
   使用rsample()采样原始动作，再用tanh压缩到[-1,1]  
 - Correct log_prob to account for tanh transformation:  
   修正log_prob以考虑tanh变换：  
+
+## reward
+<img width="518" height="351" alt="image" src="https://github.com/user-attachments/assets/70852486-f402-4259-bf1d-125024263726" />
